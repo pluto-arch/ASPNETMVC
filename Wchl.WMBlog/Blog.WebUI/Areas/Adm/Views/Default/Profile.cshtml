@@ -1,0 +1,287 @@
+﻿@model Blog.WebUI.Models.AppUser
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ViewBag.profiletitle</title>
+    <link rel="icon" type="image/png" href="~/assets/i/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="~/assets/i/app-icon72x72@2x.png">
+    <link rel="stylesheet" href="~/assets/css/amazeui.min.css" />
+    <link rel="stylesheet" href="~/assets/css/admin.css">
+    <link href="~/Content/normalize.css" rel="stylesheet" />
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <!--easyui-->
+    <link rel="stylesheet" type="text/css" href="~/Content/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/themes/icon.css">
+    <link rel="stylesheet" href="~/Scripts/layui/css/layui.css" media="all">
+    <link href="~/Scripts/layui/css/modules/laydate/default/laydate.css" rel="stylesheet" />
+    <link href="~/Scripts/layui/css/modules/layer/default/layer.css" rel="stylesheet" />
+    <link href="~/Scripts/layui/select/formSelects-v4.css" rel="stylesheet" />
+    <style>
+
+        .layui-table tbody tr:hover {
+            background-color: transparent;
+            border: none;
+        }
+
+        label {
+            width: 60px;
+        }
+    </style>
+</head>
+<body style="height: 100%;overflow-y: auto">
+    <div>
+
+        <form class="layui-form" action="/User/UpdateOwnMessage" method="post" style="width: 100%;height: 100%">
+
+            <div class="layui-container">
+                <div class="layui-row" style="padding-top: 20px;">
+                    <div class="layui-col-xs3" style="width: 150px;">
+                        <img src="~/Content/images/03.jpg" style="width: 120px; height: 100px;" />
+                    </div>
+                    <div class="layui-col-xs9">
+                        <div class="layui-row">
+                            <div class="layui-form-item">
+                                <div class="layui-col-xs2">
+                                    <label class="layui-form-label">姓氏：</label>
+                                </div>
+                                <div class="layui-col-xs5">
+                                    <input type="text" value="@ViewBag.firstname" name="firstname" lay-verify="firstname" autocomplete="on" placeholder="请输入姓氏" class="layui-input">
+                                    <input type="hidden" name="id" value="@ViewBag.uid">
+                                </div>
+                                <div class="layui-col-xs2">
+                                    <label class="layui-form-label">性别：</label>
+                                </div>
+                                <div class="layui-col-xs2">
+                                    <div class="layui-input-inline">
+                                        <input id="man" type="radio" name="gender" value="1" title="男">
+                                        <input id="weman" type="radio" name="gender" value="0" title="女">
+                                        <input type="hidden" id="ugender" value="@ViewBag.gender">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="layui-bg-green"><!---->
+                        <div class="layui-row">
+                            <div class="layui-form-item">
+                                <div class="layui-col-xs2">
+                                    <label class="layui-form-label">名称：</label>
+                                </div>
+                                <div class="layui-col-xs5">
+                                    <input type="text" value="@ViewBag.lastname" name="lastname" lay-verify="" autocomplete="on" placeholder="请输入名称" class="layui-input">
+                                </div>
+                                <div class="layui-col-xs2">
+                                    <label class="layui-form-label">年龄：</label>
+                                </div>
+                                <div class="layui-col-xs2">
+                                    <input type="number" value="@ViewBag.age" name="age" lay-verify="" autocomplete="on" placeholder="0~120" class="layui-input">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="layui-bg-green"><!---->
+                    <div class="layui-row" style="">
+                        <div class="layui-col-xs4">
+                            <div class="layui-form-item">
+                                <div class="layui-col-xs4">
+                                    <label class="layui-form-label" style="padding: 0px;padding-top: 10px">出生日期：</label>
+                                </div>
+                                <div class="layui-col-xs7">
+                                    <input id="birthday" value="@ViewBag.birthday" type="text" name="birthday" lay-verify="" autocomplete="on" placeholder="yyyy-MM-dd" class="layui-input">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-col-xs4">
+                            <div class="layui-form-item">
+                                <div class="layui-col-xs4">
+                                    <label class="layui-form-label">昵称：</label>
+                                </div>
+                                <div class="layui-col-xs7">
+                                    <input type="text" value="@ViewBag.nickname" name="nickname" lay-verify="" autocomplete="on" placeholder="请输入昵称" class="layui-input">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-col-xs4">
+                            <div class="layui-form-item">
+                                <div class="layui-col-xs4">
+                                    <label class="layui-form-label">邮箱：</label>
+                                </div>
+                                <div class="layui-col-xs7">
+                                    <input type="text" value="@ViewBag.email" name="email" lay-verify="Email" autocomplete="on" placeholder="请输入邮箱" class="layui-input">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="layui-bg-green"><!---->
+
+
+                    <div class="layui-row" style="">
+                        <div class="layui-form-item">
+                            <div class="layui-col-xs2">
+                                <label class="layui-form-label">地址：</label>
+                            </div>
+                            <div class="layui-col-xs10">
+                                <div class="layui-col-xs8">
+                                    <select id="address" xm-select="address" name="address" xm-select-search="" xm-select-max="1" xm-select-height="36px">
+                                        <option id="first" value="">现居地址</option>
+                                    </select>
+                                    <input id="location" type="hidden" value="@ViewBag.address"/>
+                                </div>
+                                <div class="layui-col-xs3" style="padding-left: 20px;">
+                                    <input type="text" value="@ViewBag.phone" name="phone" lay-verify="" autocomplete="on" placeholder="请输入联系方式" class="layui-input">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="layui-bg-green"><!---->
+                    <div class="layui-row" style="">
+                        <div class="layui-col-xs2" style="padding-left: 15px;">
+                            <label class="layui-form-label" style="padding: 0px;padding-top: 10px">个人主页：</label>
+                        </div>
+                        <div class="layui-col-xs9" style="">
+                            <input type="text" value="@ViewBag.weburl" name="weburl" lay-verify="" autocomplete="on" placeholder="请输入个人主页Url" class="layui-input">
+                        </div>
+                    </div>
+                    <hr class="layui-bg-green"><!---->
+                    <div class="layui-row" style="">
+                        <div class="layui-col-xs2" style="padding-left: 15px;">
+                            <label class="layui-form-label" style="padding: 0px;padding-top: 10px">个人爱好：</label>
+                        </div>
+                        <div class="layui-col-xs9" style="">
+                            <input type="text" style="color: chocolate" value="@ViewBag.tab" name="weburl" lay-verify="" autocomplete="on" placeholder="请输入个人主页Url" class="layui-input">
+                           
+                        </div>
+                    </div>
+                    <hr class="layui-bg-green"><!---->
+                    <div class="layui-row" style="">
+                        <div class="layui-col-xs2" style="padding-left: 15px;">
+                            <label class="layui-form-label" style="">等级：</label>
+                        </div>
+                        <div class="layui-col-xs7" style="padding-left: 15px;">
+                            <div id="dengji"></div>
+                        </div>
+                        <div class="layui-col-xs3" style="padding-left: 15px;">
+                            <div class="layui-input-inline">
+                                <button class="layui-btn" lay-submit lay-filter="formDemo">保存</button>
+                                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/circleMagic.min.js"></script>
+<script type="text/javascript" src="~/Scripts/easyuijs/jquery.easyui.min.js"></script>
+<script src="~/Scripts/layui/layui.js" charset="utf-8"></script>
+<script src="~/Scripts/layui/lay/modules/layer.js"></script>
+<script src="~/Scripts/layui/select/formSelects-v4.js"></script>
+<script src="~/Scripts/layui/lay/modules/laydate.js"></script>
+<script src="~/assets/js/amazeui.min.js"></script>
+<script src="~/assets/js/app.js"></script>
+<script>
+
+    layui.use('rate', function(){
+        var rate = layui.rate;
+        //渲染
+        var ins1 = rate.render({
+            elem: '#dengji'  //绑定元素
+        });
+    });
+
+    layui.use('form', function () {
+        var form = layui.form;
+
+        var formSelects = layui.formSelects;//多选下拉
+        formSelects.data('address', 'server', {
+            url: 'http://yapi.demo.qunar.com/mock/9813/layui/citys',
+            linkage: true,
+            linkageWidth: 120
+        });
+
+        //监听提交
+        form.on('submit(formDemo)', function(data){
+            layer.msg(JSON.stringify(data.field));
+            //ajax提交
+            layuiAjax(data);
+            return false;//组织表单跳转。使用ajax提交
+        });
+
+
+        //给单选框赋值
+        var gender = document.getElementById('ugender').value;
+        if (gender == "1") {
+            $('#man').attr('checked', true);
+        } else {
+            $('#weman').attr('checked', true);
+        }
+        form.render();//重新渲染全部
+
+        //给select赋值
+        var location = document.getElementById('location').value;
+        //layer.msg(location);
+        //formSelects.value('address', [location]);  
+      
+        
+
+
+        ////监听select改变事件
+        //form.on('select(sel)', function(data){
+        //    layer.msg(data.value); //得到被选中的值
+        //});    
+
+        //图片鼠标移入移出事件
+        $('img').on({
+            mouseover: function () {
+                layer.tips('点击更换头像', 'img', {
+                    tips: [1, '#3595CC'],
+                    time: 1000
+                });
+            },
+            mouseout: function () {
+
+            }
+        });
+    });
+
+    layui.use('laydate', function() {
+        var laydate = layui.laydate;
+        laydate.render({
+            elem: '#birthday' //指定元素
+        });
+    });
+
+
+    //ajax提交表单
+    function layuiAjax(dataForm) {
+        var loading = layer.load(2);
+        $.ajax({
+            url: dataForm.form.action,
+            type: dataForm.form.method,
+            dataType: 'JSON',
+            data: dataForm.field,
+            success: function (rep) {
+                if (rep.type=="1") {
+                    layer.msg(rep.message, { time: 3000 });
+                    layer.close(loading);
+                } else {
+                    layer.msg('error :' + rep.message, { time: 2000 });
+                    layer.close(loading);
+                }
+            },
+            error: function () {
+                layer.msg('网络异常！');
+            }
+        });
+    }
+
+
+</script>
+</body>
+</html>

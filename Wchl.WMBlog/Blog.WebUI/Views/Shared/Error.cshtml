@@ -1,0 +1,67 @@
+﻿
+@model Blog.WebUI.Models.UserModels.CreateModel
+@{
+    ViewBag.Title = "404 Not Found";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="icon" type="image/png" href="~/assets/i/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="~/assets/i/app-icon72x72@2x.png">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <link rel="stylesheet" href="~/assets/css/amazeui.min.css" />
+    <link rel="stylesheet" href="~/assets/css/admin.css">
+    <link href="~/Content/normalize.css" rel="stylesheet" />
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <!--easyui-->
+    <link rel="stylesheet" type="text/css" href="~/Content/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/themes/icon.css">
+    <link rel="stylesheet" href="~/Scripts/layui/css/layui.css" media="all">
+    <style type="text/css">
+        .mytable_td {
+            text-align: right;
+            color: aliceblue;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <header class="header">
+        <div class="full-center">
+            <div class="layui-container" style="width: 500px;height: 360px">
+
+                <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+                    <legend>@ViewBag.Title</legend>
+                </fieldset>
+                    404 Not Found!
+               
+            </div>
+        </div>
+    </header>
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/jquery-3.3.1.slim.min.js"></script>
+    <script src="~/Scripts/circleMagic.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/easyuijs/jquery.easyui.min.js"></script>
+    <script src="~/Scripts/layui/layui.js" charset="utf-8"></script>
+    <script src="~/assets/js/amazeui.min.js"></script>
+    <script src="~/assets/js/app.js"></script>
+    <script>
+        $('.header').circleMagic({
+            elem: '.header',
+            radius: 35,
+            densety: .3,
+            color: 'rgba(255,255,255, 0.4)',
+            //color: 'random',
+            clearOffset: .3
+        });
+    </script>
+</body>
+</html>
+

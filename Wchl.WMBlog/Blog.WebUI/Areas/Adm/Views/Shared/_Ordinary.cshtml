@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="icon" type="image/png" href="~/assets/i/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="~/assets/i/app-icon72x72@2x.png">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <link rel="stylesheet" href="~/assets/css/amazeui.min.css" />
+    <link rel="stylesheet" href="~/assets/css/admin.css">
+    <link rel="stylesheet" href="~/Content/font-awesome.css">
+    <!--easyui-->
+    <link rel="stylesheet" type="text/css" href="~/Content/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/themes/icon.css">
+
+    <!--[if (gte IE 9)|!(IE)]><!-->
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <!--<![endif]-->
+    <script src="~/assets/js/amazeui.min.js"></script>
+    <script src="~/assets/js/app.js"></script>
+    <script type="text/javascript" src="~/Scripts/easyuijs/jquery.easyui.min.js"></script>
+    <style>
+        .header {
+            text-align: center;
+        }
+
+            .header h1 {
+                font-size: 200%;
+                color: #333;
+                margin-top: 30px;
+            }
+
+            .header p {
+                font-size: 14px;
+            }
+    </style>
+    <style>
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .get {
+            background: #1E5B94;
+            color: #fff;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .get-title {
+            font-size: 200%;
+            border: 2px solid #fff;
+            padding: 20px;
+            display: inline-block;
+        }
+
+        .get-btn {
+            background: #fff;
+        }
+
+        .detail {
+            background: #fff;
+        }
+
+        .detail-h2 {
+            text-align: center;
+            font-size: 150%;
+            margin: 40px 0;
+        }
+
+        .detail-h3 {
+            color: #1f8dd6;
+        }
+
+        .detail-p {
+            color: #7f8c8d;
+        }
+
+        .detail-mb {
+            margin-bottom: 30px;
+        }
+
+        .hope {
+            background: #0bb59b;
+            padding: 50px 0;
+        }
+
+        .hope-img {
+            text-align: center;
+        }
+
+        .hope-hr {
+            border-color: #149C88;
+        }
+
+        .hope-title {
+            font-size: 140%;
+        }
+
+        .about {
+            background: #fff;
+            padding: 40px 0;
+            color: #7f8c8d;
+        }
+
+        .about-color {
+            color: #34495e;
+        }
+
+        .about-title {
+            font-size: 180%;
+            padding: 30px 0 50px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body style="overflow-x: auto">
+    <div class="am-g" style="height: 85%">
+        @RenderBody()
+    </div>
+
+
+</body>
+</html>

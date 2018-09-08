@@ -1,0 +1,36 @@
+------------------------------Start------------------------------
+2018-08-25 00:01:59.7128 - ERROR:所需的防伪表单字段“__RequestVerificationToken”不存在。 Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+2018-08-25 00:01:59.9687 - ERROR:值不能为 null。
+参数名: source Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+2018-08-25 00:03:58.9214 - ERROR:所需的防伪表单字段“__RequestVerificationToken”不存在。 Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+2018-08-25 00:03:59.2452 - ERROR:值不能为 null。
+参数名: source Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+2018-08-25 00:05:48.8151 - ERROR:所需的防伪表单字段“__RequestVerificationToken”不存在。 Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+2018-08-25 00:05:48.9610 - ERROR:值不能为 null。
+参数名: source Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+2018-08-25 00:06:49.3912 - ERROR:值不能为 null 或为空。
+参数名: url Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+2018-08-25 14:53:23.2427 - ERROR:P:\Repos_01\Wchl.WMBlog\Blog.WebUI\Areas\Adm\Views\Default\Index.cshtml(590): error CS0103: The name 'fa' does not exist in the current context Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+------------------------------End------------------------------
+2018-08-25 15:38:54.9940 - ERROR:未找到视图“Desktop”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Views/Default/Desktop.aspx
+~/Views/Default/Desktop.ascx
+~/Views/Shared/Desktop.aspx
+~/Views/Shared/Desktop.ascx
+~/Views/Default/Desktop.cshtml
+~/Views/Default/Desktop.vbhtml
+~/Views/Shared/Desktop.cshtml
+~/Views/Shared/Desktop.vbhtml Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+2018-08-25 15:39:56.2741 - ERROR:未找到视图“Desktop”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Views/Default/Desktop.aspx
+~/Views/Default/Desktop.ascx
+~/Views/Shared/Desktop.aspx
+~/Views/Shared/Desktop.ascx
+~/Views/Default/Desktop.cshtml
+~/Views/Default/Desktop.vbhtml
+~/Views/Shared/Desktop.cshtml
+~/Views/Shared/Desktop.vbhtml Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+------------------------------End------------------------------
+2018-08-25 21:03:06.8006 - ERROR:未找到分部视图“~/Areas/Adm/ iews/Default/Index_Partial_Up.cshtml”或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Areas/Adm/ iews/Default/Index_Partial_Up.cshtml Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+------------------------------End------------------------------

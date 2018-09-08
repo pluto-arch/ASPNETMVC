@@ -1,0 +1,153 @@
+﻿@model Blog.ViewModels.SysUserInfoViewModel
+
+@{
+    ViewBag.Title = "Create";
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="icon" type="image/png" href="~/assets/i/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="~/assets/i/app-icon72x72@2x.png">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <link rel="stylesheet" href="~/assets/css/amazeui.min.css" />
+    <link rel="stylesheet" href="~/assets/css/admin.css">
+    <link href="~/Content/normalize.css" rel="stylesheet" />
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <!--easyui-->
+    <link rel="stylesheet" type="text/css" href="~/Content/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/themes/icon.css">
+    <link rel="stylesheet" href="~/Scripts/layui/css/layui.css" media="all">
+    <style type="text/css">
+        .mytable {
+            text-align: right;
+            color: aliceblue
+        }
+    </style>
+</head>
+<body>
+
+                <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+                    <legend>@ViewBag.loginTitle</legend>
+                </fieldset>
+
+                <form class="layui-form" action="Create" method="post">
+
+                    <table class="am-table">
+                        <tbody>
+                            <tr>
+                                <td class="mytable" style="border: none">
+                                    <label class="layui-form-label">用户名</label>@Html.AntiForgeryToken()<!--Html.AntiForgeryToken辅助器，并创建了一个隐藏的input元素，以保护returnUrl参数-->
+                                    <input type="hidden" name="returnUrl" value="@ViewBag.returnUrl" />
+                                </td>
+                                <td style="border: none">
+                                    <input type="text" name="ULoginName" style="color: black" lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input">
+                                </td>
+                            </tr>
+                        <tr>
+                            <td class="mytable">
+                                <label class="layui-form-label">密码</label>
+                            </td>
+                            <td>
+                                <input type="password" style="color: black" name="ULoginPwd" lay-verify="pass" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mytable">
+                                <label class="layui-form-label">真名</label>
+                            </td>
+                            <td>
+                                <input type="text" style="color: black" name="URealName" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mytable">
+                                <label class="layui-form-label">状态</label>
+                            </td>
+                            <td>
+                                <input type="text" style="color: black" name="UState"placeholder="请输入密码" autocomplete="off" class="layui-input">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mytable">
+                                <label class="layui-form-label">备注</label>
+                            </td>
+                            <td>
+                                <input type="text" style="color: black" name="URemark" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mytable">
+                                <label class="layui-form-label">创建时间</label>
+                            </td>
+                            <td>
+                                <input type="text" style="color: black" name="UCreateTime" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                            </td>
+                        </tr>
+                        
+
+                        <tr>
+                                <td>
+                                    <button class="layui-btn" lay-submit="" lay-filter="formSubmit" style="margin-left: 25px">登录</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="text-align: center;border: none">
+                                    <span style="color: red">@Html.ValidationSummary(true)</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/circleMagic.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/easyuijs/jquery.easyui.min.js"></script>
+    <script src="~/Scripts/layui/layui.js" charset="utf-8"></script>
+    <script src="~/assets/js/amazeui.min.js"></script>
+    <script src="~/assets/js/app.js"></script>
+    <script>
+        $(function () {
+            layui.use('form', function () {
+                var form = layui.form;
+                //监听提交事件
+                form.on('submit(formSubmit)', function (data) {
+                    console.log(data);
+                    layuiAjax(data);
+                    return false;
+                });
+            });
+
+        });
+        //异步提交  一定在form.on中加return false  阻止表单跳转
+        function layuiAjax(dataForm) {
+            var loading = layer.load(2);
+            $.ajax({
+                url: dataForm.form.action,
+                type: dataForm.form.method,
+                dataType: 'JSON',
+                data: dataForm.field,
+                success: function (rep) {
+                    if (rep.type=="1") {
+                        layer.msg(rep.message, { time: 3000 });
+                        layer.close(loading);
+                    } else {
+                        layer.msg('error :' + rep.message, { time: 2000 });
+                        layer.close(loading);
+                    }
+                },
+                error: function () {
+                    layer.msg('网络异常！');
+                }
+            });
+        }
+
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,153 @@
+------------------------------Start------------------------------
+2018-08-24 09:21:55.2788 - ERROR:P:\Repos_01\Wchl.WMBlog\Blog.WebUI\Views\Home\index.cshtml(19): error CS0103: The name 'media' does not exist in the current context Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+2018-08-24 09:22:59.4481 - ERROR:P:\Repos_01\Wchl.WMBlog\Blog.WebUI\Views\Home\index.cshtml(19): error CS0103: The name 'media' does not exist in the current context Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+2018-08-24 09:23:00.1561 - ERROR:P:\Repos_01\Wchl.WMBlog\Blog.WebUI\Views\Home\index.cshtml(19): error CS0103: The name 'media' does not exist in the current context Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+2018-08-24 09:23:00.6338 - ERROR:P:\Repos_01\Wchl.WMBlog\Blog.WebUI\Views\Home\index.cshtml(19): error CS0103: The name 'media' does not exist in the current context Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+2018-08-24 09:23:00.8447 - ERROR:P:\Repos_01\Wchl.WMBlog\Blog.WebUI\Views\Home\index.cshtml(19): error CS0103: The name 'media' does not exist in the current context Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+2018-08-24 09:23:01.0615 - ERROR:P:\Repos_01\Wchl.WMBlog\Blog.WebUI\Views\Home\index.cshtml(19): error CS0103: The name 'media' does not exist in the current context Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+------------------------------End------------------------------
+2018-08-24 09:24:26.2637 - ERROR:P:\Repos_01\Wchl.WMBlog\Blog.WebUI\Views\Home\index.cshtml(19): error CS0103: The name 'media' does not exist in the current context Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+2018-08-24 09:32:43.3710 - ERROR:传入字典的模型项的类型为“System.Collections.Generic.List`1[Blog.ViewModels.SysUserInfoViewModel]”，但此字典需要类型“Blog.ViewModels.SysUserInfoViewModel”的模型项。 Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+------------------------------End------------------------------
+2018-08-24 09:39:11.6566 - ERROR:未找到视图“hello vues”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Views/Home/hello vues.aspx
+~/Views/Home/hello vues.ascx
+~/Views/Shared/hello vues.aspx
+~/Views/Shared/hello vues.ascx
+~/Views/Home/hello vues.cshtml
+~/Views/Home/hello vues.vbhtml
+~/Views/Shared/hello vues.cshtml
+~/Views/Shared/hello vues.vbhtml Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+------------------------------End------------------------------
+2018-08-24 12:17:53.2964 - ERROR:尚未对布局页“~/Areas/Admin/Views/Shared/_AdminLayout.cshtml”调用“RenderBody”方法。 Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+2018-08-24 12:18:34.3588 - ERROR:尚未对布局页“~/Areas/Admin/Views/Shared/_AdminLayout.cshtml”调用“RenderBody”方法。 Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+------------------------------End------------------------------
+2018-08-24 12:35:58.0364 - ERROR:尚未对布局页“~/Areas/Admin/Views/Shared/_AdminLayout.cshtml”调用“RenderBody”方法。 Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+------------------------------End------------------------------
+2018-08-24 12:55:01.5261 - ERROR:未找到视图“Show”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Areas/Admin/Views/Home/Show.aspx
+~/Areas/Admin/Views/Home/Show.ascx
+~/Areas/Admin/Views/Shared/Show.aspx
+~/Areas/Admin/Views/Shared/Show.ascx
+~/Views/Home/Show.aspx
+~/Views/Home/Show.ascx
+~/Views/Shared/Show.aspx
+~/Views/Shared/Show.ascx
+~/Areas/Admin/Views/Home/Show.cshtml
+~/Areas/Admin/Views/Home/Show.vbhtml
+~/Areas/Admin/Views/Shared/Show.cshtml
+~/Areas/Admin/Views/Shared/Show.vbhtml
+~/Views/Home/Show.cshtml
+~/Views/Home/Show.vbhtml
+~/Views/Shared/Show.cshtml
+~/Views/Shared/Show.vbhtml Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+2018-08-24 12:55:16.8640 - ERROR:未找到视图“Show”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Areas/Admin/Views/Home/Show.aspx
+~/Areas/Admin/Views/Home/Show.ascx
+~/Areas/Admin/Views/Shared/Show.aspx
+~/Areas/Admin/Views/Shared/Show.ascx
+~/Views/Home/Show.aspx
+~/Views/Home/Show.ascx
+~/Views/Shared/Show.aspx
+~/Views/Shared/Show.ascx
+~/Areas/Admin/Views/Home/Show.cshtml
+~/Areas/Admin/Views/Home/Show.vbhtml
+~/Areas/Admin/Views/Shared/Show.cshtml
+~/Areas/Admin/Views/Shared/Show.vbhtml
+~/Views/Home/Show.cshtml
+~/Views/Home/Show.vbhtml
+~/Views/Shared/Show.cshtml
+~/Views/Shared/Show.vbhtml Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+------------------------------End------------------------------
+2018-08-24 13:07:51.7515 - ERROR:未找到视图“Show”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Views/AdminHome/Show.aspx
+~/Views/AdminHome/Show.ascx
+~/Views/Shared/Show.aspx
+~/Views/Shared/Show.ascx
+~/Views/AdminHome/Show.cshtml
+~/Views/AdminHome/Show.vbhtml
+~/Views/Shared/Show.cshtml
+~/Views/Shared/Show.vbhtml Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+2018-08-24 13:07:52.2033 - ERROR:未找到视图“Show”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Views/AdminHome/Show.aspx
+~/Views/AdminHome/Show.ascx
+~/Views/Shared/Show.aspx
+~/Views/Shared/Show.ascx
+~/Views/AdminHome/Show.cshtml
+~/Views/AdminHome/Show.vbhtml
+~/Views/Shared/Show.cshtml
+~/Views/Shared/Show.vbhtml Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+2018-08-24 13:08:04.0734 - ERROR:未找到视图“Show”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Views/AdminHome/Show.aspx
+~/Views/AdminHome/Show.ascx
+~/Views/Shared/Show.aspx
+~/Views/Shared/Show.ascx
+~/Views/AdminHome/Show.cshtml
+~/Views/AdminHome/Show.vbhtml
+~/Views/Shared/Show.cshtml
+~/Views/Shared/Show.vbhtml Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+------------------------------End------------------------------
+2018-08-24 15:40:02.6634 - ERROR:未找到视图“Index”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Areas/Adm/Views/Default/Index.aspx
+~/Areas/Adm/Views/Default/Index.ascx
+~/Areas/Adm/Views/Shared/Index.aspx
+~/Areas/Adm/Views/Shared/Index.ascx
+~/Views/Default/Index.aspx
+~/Views/Default/Index.ascx
+~/Views/Shared/Index.aspx
+~/Views/Shared/Index.ascx
+~/Areas/Adm/Views/Default/Index.cshtml
+~/Areas/Adm/Views/Default/Index.vbhtml
+~/Areas/Adm/Views/Shared/Index.cshtml
+~/Areas/Adm/Views/Shared/Index.vbhtml
+~/Views/Default/Index.cshtml
+~/Views/Default/Index.vbhtml
+~/Views/Shared/Index.cshtml
+~/Views/Shared/Index.vbhtml Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+------------------------------End------------------------------
+2018-08-24 18:09:42.2290 - ERROR:Multiple object sets per type are not supported. The object sets 'AppUsers' and 'Users' can both contain instances of type 'Blog.WebUI.Models.AppUser'. Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+2018-08-24 18:11:30.1966 - ERROR:Multiple object sets per type are not supported. The object sets 'AppUsers' and 'Users' can both contain instances of type 'Blog.WebUI.Models.AppUser'. Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+2018-08-24 18:12:14.0970 - ERROR:Multiple object sets per type are not supported. The object sets 'AppUsers' and 'Users' can both contain instances of type 'Blog.WebUI.Models.AppUser'. Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+2018-08-24 18:13:20.4530 - ERROR:Multiple object sets per type are not supported. The object sets 'AppUsers' and 'Users' can both contain instances of type 'Blog.WebUI.Models.AppUser'. Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+------------------------------End------------------------------
+2018-08-24 18:14:56.5225 - ERROR:Multiple object sets per type are not supported. The object sets 'AppUsers' and 'Users' can both contain instances of type 'Blog.WebUI.Models.AppUser'. Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+2018-08-24 18:15:19.6806 - ERROR:Multiple object sets per type are not supported. The object sets 'AppUsers' and 'Users' can both contain instances of type 'Blog.WebUI.Models.AppUser'. Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+------------------------------End------------------------------
+2018-08-24 18:15:37.2655 - ERROR:Multiple object sets per type are not supported. The object sets 'AppUsers' and 'Users' can both contain instances of type 'Blog.WebUI.Models.AppUser'. Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+2018-08-24 18:18:18.6505 - ERROR:Multiple object sets per type are not supported. The object sets 'AppUsers' and 'Users' can both contain instances of type 'Blog.WebUI.Models.AppUser'. Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+2018-08-24 18:18:54.3586 - ERROR:Multiple object sets per type are not supported. The object sets 'AppUsers' and 'Users' can both contain instances of type 'Blog.WebUI.Models.AppUser'. Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+2018-08-24 18:20:10.6610 - ERROR:Multiple object sets per type are not supported. The object sets 'AppUsers' and 'Users' can both contain instances of type 'Blog.WebUI.Models.AppUser'. Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+2018-08-24 18:24:05.4791 - ERROR:值不能为 null。
+参数名: source Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+2018-08-24 18:24:32.7169 - ERROR:值不能为 null。
+参数名: source Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+------------------------------End------------------------------
+------------------------------End------------------------------
+2018-08-24 18:27:01.3747 - ERROR:Multiple object sets per type are not supported. The object sets 'AppUsers' and 'Users' can both contain instances of type 'Blog.WebUI.Models.AppUser'. Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+------------------------------End------------------------------
+2018-08-24 18:50:29.3907 - ERROR:未将对象引用设置到对象的实例。 Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+2018-08-24 18:51:43.5396 - ERROR:未将对象引用设置到对象的实例。 Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+2018-08-24 20:35:03.8831 - ERROR:值不能为 null 或为空。
+参数名: url Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+2018-08-24 20:35:22.8202 - ERROR:提供的防伪标记适用于其他基于声明的用户，而不适用于当前用户。 Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+2018-08-24 20:35:22.8362 - ERROR:值不能为 null。
+参数名: source Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+2018-08-24 20:38:52.3997 - ERROR:值不能为 null 或为空。
+参数名: url Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+2018-08-24 20:46:52.2204 - ERROR:“System.Collections.Generic.List<Blog.ViewModels.SysUserInfoViewModel>”未包含“Keys”的定义 Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+------------------------------End------------------------------
+2018-08-24 20:53:33.7277 - ERROR:值不能为 null 或为空。
+参数名: url Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+2018-08-24 21:19:25.4863 - ERROR:无法删除数据库 "Blog.Identity.DB"，因为该数据库当前正在使用。 Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+------------------------------End------------------------------
+2018-08-24 23:03:25.0989 - ERROR:P:\Repos_01\Wchl.WMBlog\Blog.WebUI\Views\Home\MainPage.cshtml(28): error CS0103: The name 'media' does not exist in the current context Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+------------------------------End------------------------------
+2018-08-24 23:57:12.0526 - ERROR:所需的防伪 Cookie“__RequestVerificationToken”不存在。 Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+2018-08-24 23:57:12.1026 - ERROR:值不能为 null。
+参数名: source Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+2018-08-24 23:58:12.1122 - ERROR:所需的防伪 Cookie“__RequestVerificationToken”不存在。 Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+2018-08-24 23:58:12.4460 - ERROR:值不能为 null。
+参数名: source Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+2018-08-24 23:59:31.3465 - ERROR:所需的防伪 Cookie“__RequestVerificationToken”不存在。 Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+2018-08-24 23:59:31.5304 - ERROR:值不能为 null。
+参数名: source Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 

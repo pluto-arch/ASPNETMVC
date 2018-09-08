@@ -1,0 +1,145 @@
+﻿@model Blog.WebUI.Models.AppUser
+@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+
+
+
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="后台首页">
+    <meta name="keywords" content="user">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="icon" type="image/png" href="~/assets/i/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="~/assets/i/app-icon72x72@2x.png">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <link rel="stylesheet" href="~/assets/css/amazeui.min.css" />
+    <link rel="stylesheet" href="~/assets/css/admin.css">
+    <link rel="stylesheet" href="~/assets/css/app.css" />
+    <!--easyui-->
+    <link rel="stylesheet" type="text/css" href="~/Content/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/themes/icon.css">
+    <link rel="stylesheet" href="~/Scripts/layui/css/layui.css" media="all">
+    <link href="~/Scripts/layui/css/modules/layer/default/layer.css" rel="stylesheet" />
+
+    <style type="text/css">
+        .my-footer {
+            height: 3%;
+            padding: 1px 0;
+            margin-top: 0px;
+            text-align: center;
+        }
+
+        .admin-content {
+            height: 100%;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        html,
+        body {
+            height: 100%;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+
+
+
+    <div class="am-container">
+        @Html.Partial("~/Areas/Adm/Views/Default/Index_Partial_Up.cshtml")
+    </div>
+    <div class="am-cf admin-main" style="overflow-y: hidden">
+
+        @Html.Partial("~/Areas/Adm/Views/Default/Index_Partial_Menu.cshtml")
+
+        <div class="admin-content" style="height:95%;">
+            <div class="admin-content-body" style="width: 100%; height: 100%;">
+                <iframe id="frmpage" name="ifraMain" frameborder="0" scrolling="yes" src="/Adm/Default/Index" style="height:100%; width: 100%;"></iframe>
+            </div>
+        </div>
+
+        <footer class="my-footer" id="processparent">
+            <small>© Copyright ZYL by the AmazeUI Team.</small>
+        </footer>
+    </div>
+    <a href="#" class="am-icon-btn am-icon-th-list am-show-sm-only admin-menu" data-am-offcanvas="{target: '#admin-offcanvas'}"></a>
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/layui/layui.js" charset="utf-8"></script>
+    <script src="~/Scripts/layui/lay/modules/layer.js"></script>
+    <script src="~/assets/js/amazeui.min.js"></script>
+    <script src="~/assets/js/iscroll.js"></script>
+    <script src="~/assets/js/app.js">
+    </script>
+    <script>
+
+        $(function () {
+            /*
+             * 测试动态添加
+             */
+            $.ajax({
+                type: "POST",
+                url: "/Adm/Default/GetDate",
+                data: "",
+                success: function (data) {
+                    console.log(data);
+                    var html = document.getElementById("message").innerHTML;
+                    document.getElementById("message").innerHTML = html + data;
+                }
+            });
+        });
+        function ChangePage(index) {
+            var loading = layer.load(2);
+            document.getElementById('frmpage').src = index;
+            var progress = $.AMUI.progress;
+            progress.configure({ showSpinner: false });
+            progress.set(0.4);
+            var iframe = document.getElementById("frmpage");
+            iframe.onload = function () {
+                progress.done();
+                layer.close(loading);
+                //$modal.modal('close');
+            };
+        }
+
+        function Logout() {
+            var loading = layer.load(2);
+            $.ajax({
+                url: "/Default/Logout",
+                success: function (data) {
+                    if (data.type == 1) {
+                        layer.msg(data.message, { time: 3000 });
+                        layer.close(loading);
+                        window.location.href = data.value;
+                    } else {
+                        layer.msg("网络错误", { time: 3000 });
+                        layer.close(loading);
+                    }
+                    
+                    
+                }
+            });
+        }
+
+        function ShowProfile(value,id) {
+            //iframe层-父子操作
+            layer.open({
+                type: 2,
+                title:value+'：个人信息',
+                area: ['700px', '520px'],
+                fixed: false, //不固定
+                maxmin: true,
+                content: 'Profile/'+id
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+﻿@model Blog.WebUI.Models.AppUser
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+<div>
+    <div>@Model.Id</div>
+    <div>@Model.Email</div>
+    <div>@Model.UserName</div>
+    <div>
+        @foreach (var item in @Model.Logins)
+        {
+            <table>
+                <thead>
+                    <tr>LoginProvider</tr>
+                    <tr>ProviderKey</tr>
+                    <tr>UserId</tr>
+                </thead>
+                <tbody>
+                <tr>@item.LoginProvider</tr>
+                <tr>@item.ProviderKey</tr>
+                <tr>@item.UserId</tr>
+                </tbody>
+            </table>
+        }
+    </div>
+    <div>
+        @foreach (var item in @Model.Claims)
+        {
+            <table>
+                <thead>
+                <tr>ClaimValue</tr>
+                <tr>Id</tr>
+                <tr>ClaimType</tr>
+                <tr>UserId</tr>
+                </thead>
+                <tbody>
+                <tr>@item.ClaimValue</tr>
+                <tr>@item.Id</tr>
+                <tr>@item.ClaimType</tr>
+                <tr>@item.UserId</tr>
+                </tbody>
+            </table>
+        }
+    </div>
+
+</div>
+</body>
+</html>

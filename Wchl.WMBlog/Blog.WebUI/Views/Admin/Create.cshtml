@@ -1,0 +1,32 @@
+﻿@model Blog.WebUI.Models.UserModels.CreateModel
+@{
+    ViewBag.Title = "注册";
+    Layout = "~/Views/Shared/_LoginRegister.cshtml";
+}
+
+<div class="am-u-lg-6 am-u-md-8 am-u-sm-centered">
+    <form class="am-form" action="Create" method="post">
+        <fieldset>
+            <legend>注册</legend>
+            <div class="am-form-group">
+                <label for="name">用户名:</label>
+                <input type="text" name="Name" id="name" value="">
+            </div>
+
+            <div class="am-form-group">
+                <label for="password">密码:</label>
+                <input type="password" name="Password" id="password" value="">
+            </div>
+
+            <div class="am-form-group">
+                <label for="email">邮箱:</label>
+                <input type="email" name="Email" id="email" value="">
+            </div>
+            <p>
+                <button type="submit" class="am-btn am-btn-default">提交</button>
+                @Html.ActionLink("取消", "Index", null, new { @class = "am-btn am-btn-primary" })
+            </p>
+        </fieldset>
+    </form>
+</div>
+

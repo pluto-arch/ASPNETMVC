@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>layui</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="~/Scripts/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="~/assets/css/amazeui.min.css" />
+    <link rel="stylesheet" href="~/assets/css/admin.css">
+    <link rel="stylesheet" href="~/Content/font-awesome.css">
+    <!--easyui-->
+    <link rel="stylesheet" type="text/css" href="~/Content/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/themes/icon.css">
+    <!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
+    <style type="text/css">
+        html,
+        body {
+            height: 100%;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="am-cf am-padding am-padding-bottom-0" style="">
+        <div class="am-fl am-cf" style=""><strong class="am-text-primary am-text-lg">系统异常</strong> / <small>System Exceptions</small></div>
+        <div class="am-fl am-cf" style="float: right; margin-left: 5px;"><button class="layui-btn"><i class="am-icon-search"></i> 查询</button></div>
+        <div class="am-fl am-cf" style="float: right;margin-left: 5px;">
+            <input type="text" name="title" required lay-verify="required" placeholder="查询条件" autocomplete="off" class="layui-input">
+        </div>
+        <div class="am-fl am-cf" style="float: right;">
+            <input type="text" name="title" required lay-verify="required" placeholder="查询条件" autocomplete="off" class="layui-input">
+        </div>
+
+    </div>
+
+    <hr />
+    <div class="layui-row">
+        <div class="layui-col-md12">
+            <table class="layui-hide" id="test" lay-filter="tests"></table>
+        </div>
+    </div>
+
+
+    <script src="~/Scripts/jquery-3.3.1.min.js" charset="utf-8"></script>
+    <script src="~/Scripts/layui/layui.js" charset="utf-8"></script>
+
+    <!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+
+    <script>
+
+
+
+        $(function () {
+            var flag = "1";
+            layui.use('table', function () {
+                var table = layui.table;
+                table.render({
+                    elem: '#test',
+                    url: 'GetList',
+                    even: true,//隔行换色
+                    height: '490',//固定高度
+                    cols: [[
+                        { field: 'id', width: 70, title: '编号',sort:true },
+                        { field: 'message', width: 500, title: '异常信息' },
+                        { field: 'source', width: 80, title: '来源' },
+                        { field: 'stackTrace', width: 200, title: '堆栈信息' },
+                        { field: 'data', width: 80, title: '程序集' },
+                        { field: 'targetSite', width: 120, title: '目标页' },
+                        { field: 'createTime', width: 180, title: '时间', sort: true },
+                        { field: '', width: 80, title: '操作', fixed: 'right', toolbar: '#barDemo' }
+                    ]],
+                    page: true,
+                    loading: true
+                });
+                //监听工具条事件
+                table.on('tool(tests)', function (obj) { //注：tool是工具条事件名，test是table原始容器的属性 lay-filter="对应的值
+                    var data = obj.data; //获得当前行数据
+                    var layEvent = obj.event; //获得 lay-event 对应的值（也可以是表头的 event 参数对应的值）
+                    var tr = obj.tr; //获得当前行 tr 的DOM对象
+                    if (layEvent === 'detail') { //查看
+                        //do somehing
+                        layer.msg('查看详情');
+                    }
+                    else if (layEvent === 'del') { //删除
+                        layer.confirm('真的删除行么', function (index) {
+                            obj.del(); //删除对应行（tr）的DOM结构，并更新缓存
+                            layer.close(index);
+                            //向服务端发送删除指令
+                        });
+                    } else if (layEvent === 'edit') { //编辑
+                        //do something
+                        layer.msg('编辑');
+                        //同步更新缓存对应的值
+                        obj.update({
+                            username: '123'
+                            , title: 'xxx'
+                        });
+                    }
+                });
+            });
+        });
+
+
+    </script>
+    <!--table工具条（放哪里都可以）-->
+    <script type="text/html" id="barDemo">
+        <a class="layui-btn layui-btn-xs" lay-event="detail">查看</a>
+        @*<a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+            <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>*@
+    </script>
+
+</body>
+</html>

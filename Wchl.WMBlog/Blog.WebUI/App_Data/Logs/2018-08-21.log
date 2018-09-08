@@ -1,0 +1,21 @@
+------------------------------Start------------------------------
+2018-08-21 10:14:54.1959 - ERROR:未能找到任何适合于指定的区域性或非特定区域性的资源。请确保在编译时已将“Blog.WebUI.Properties.Resources.resources”正确嵌入或链接到程序集“Blog.WebCore”，或者确保所有需要的附属程序集都可加载并已进行了完全签名。 Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+------------------------------End------------------------------
+2018-08-21 11:01:03.4732 - ERROR:未将对象引用设置到对象的实例。 Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+------------------------------End------------------------------
+2018-08-21 11:02:15.6428 - ERROR:未将对象引用设置到对象的实例。 Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+------------------------------End------------------------------
+2018-08-21 14:53:34.3967 - ERROR:值不能为 null。
+参数名: source Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+2018-08-21 14:55:15.6771 - ERROR:值不能为 null。
+参数名: source Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+2018-08-21 15:26:03.7459 - ERROR:值不能为 null。
+参数名: source Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+2018-08-21 15:29:49.1954 - ERROR:值不能为 null。
+参数名: source Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+2018-08-21 15:31:39.8246 - ERROR:值不能为 null。
+参数名: source Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+2018-08-21 15:35:28.4352 - ERROR:值不能为 null。
+参数名: source Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+2018-08-21 15:36:43.6638 - ERROR:值不能为 null。
+参数名: source Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 

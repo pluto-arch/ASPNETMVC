@@ -1,0 +1,3 @@
+------------------------------Start------------------------------
+2018-08-23 22:47:04.6712 - ERROR:P:\Repos_01\Wchl.WMBlog\Blog.WebUI\Views\Home\index.cshtml(152): error CS0103: The name 'amazeUI' does not exist in the current context Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 
+2018-08-23 22:47:14.0338 - ERROR:P:\Repos_01\Wchl.WMBlog\Blog.WebUI\Views\Home\index.cshtml(152): error CS0103: The name 'amazeUI' does not exist in the current context Blog.Common.Log.NLogLogger.Error(P:\Repos_01\Wchl.WMBlog\Blog.Common\Log\NLogLogger.cs:34) 

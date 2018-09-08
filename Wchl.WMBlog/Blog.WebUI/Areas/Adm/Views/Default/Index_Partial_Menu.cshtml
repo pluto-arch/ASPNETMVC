@@ -1,0 +1,47 @@
+﻿<div class="admin-sidebar am-offcanvas tpl-left-nav tpl-left-nav-hover" id="admin-offcanvas">
+    <div class="am-offcanvas-bar admin-offcanvas-bar">
+        <ul class="am-list admin-sidebar-list">
+            <!--可以利用foreach自动生成-->
+            <li style="text-align: left" class="tpl-left-nav-item"><a onclick="ChangePage('Index')"><span class="am-icon-home"></span> 首页</a></li>
+            <li style="text-align: left" class="tpl-left-nav-item"><a onclick="ChangePage('Index')"><span class="am-icon-home"></span> 个人中心</a></li>
+            <li class="">
+                <a class="nav-link tpl-left-nav-link-list" data-am-collapse="{target: '#collapse-nav'}">
+                    <span class="am-icon-file"></span> 博客管理
+                    <i class="am-icon-angle-right am-fr am-margin-right tpl-left-nav-more-ico tpl-left-nav-more-ico-rotate"></i>
+                </a>
+                <ul class="am-list am-collapse admin-sidebar-sub am-in tpl-left-nav-sub-menu" id="collapse-nav">
+                    <li><a onclick="ChangePage('/Adm/Default/BlogList')" class="am-cf"><span class="am-icon-check"></span> 博客列表</a></li>
+                    <li><a onclick="ChangePage('BlogPublish')"><span class="am-icon-puzzle-piece"></span> 发布博客</a></li>
+                    <li><a onclick="ChangePage('BlogResourceManager')"><span class="am-icon-th"></span> 博客资源管理</a></li>
+                </ul>
+            </li>
+            <li class="">
+                <a class="am-cf tpl-left-nav-link-list" data-am-collapse="{target: '#collapse-nav2'}">
+                    <span class="am-icon-file"></span> 系统管理
+                    <i class="am-icon-angle-right am-fr am-margin-right tpl-left-nav-more-ico tpl-left-nav-more-ico-rotate"></i>
+                </a>
+                <ul class="am-list am-collapse admin-sidebar-sub am-in tpl-left-nav-sub-menu" id="collapse-nav2">
+                    <li><a onclick="ChangePage('/Adm/Default/BlogUserList')" class="am-cf"><span class="am-icon-check"></span> 用户管理</a></li>
+                    <li><a onclick="ChangePage('/Adm/Role/Index')" class="am-cf"><span class="am-icon-check"></span> 角色管理</a></li>
+                    <li><a onclick="ChangePage('/Adm/Claims/Index')"><span class="am-icon-puzzle-piece"></span> 权限管理</a></li>
+                    <li><a onclick="ChangePage('/Adm/SysLog/Index')"><span class="am-icon-th"></span> 系统日志</a></li>
+                    <li><a onclick="ChangePage('/Adm/SysException/Index')"><span class="am-icon-th"></span> 系统异常</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="am-panel am-panel-default admin-sidebar-panel">
+            <div class="am-panel-bd">
+                <p><span class="am-icon-bookmark"></span> 公告</p>
+                <p>时光静好，与君语；细水流年，与君同。—— Amaze UI</p>
+            </div>
+        </div>
+
+        <div class="am-panel am-panel-default admin-sidebar-panel">
+            <div class="am-panel-bd">
+                <p><span class="am-icon-tag"></span> wiki</p>
+                <p>Welcome to the Amaze UI wiki!</p>
+            </div>
+        </div>
+    </div>
+</div>

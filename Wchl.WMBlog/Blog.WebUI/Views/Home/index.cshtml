@@ -1,0 +1,167 @@
+﻿@using System.Web.UI.WebControls
+@{
+    ViewBag.Title = "首页";
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="icon" type="image/png" href="~/assets/i/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="~/assets/i/app-icon72x72@2x.png">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <link rel="stylesheet" href="~/assets/css/amazeui.min.css" />
+    <link rel="stylesheet" href="~/assets/css/admin.css">
+    <!--easyui-->
+    <link rel="stylesheet" type="text/css" href="~/Content/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/themes/icon.css">
+    <!--[if (gte IE 9)|!(IE)]><!-->
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <!--<![endif]-->
+    <script src="~/assets/js/amazeui.min.js"></script>
+    <script src="~/assets/js/app.js"></script>
+    <script type="text/javascript" src="~/Scripts/easyuijs/jquery.easyui.min.js"></script>
+    <style>
+        .get {
+            background: #1E5B94;
+            color: #fff;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .get-title {
+            font-size: 200%;
+            border: 2px solid #fff;
+            padding: 20px;
+            display: inline-block;
+        }
+
+        .get-btn {
+            background: #fff;
+        }
+
+        .detail {
+            background: #fff;
+        }
+
+        .detail-h2 {
+            text-align: center;
+            font-size: 150%;
+            margin: 40px 0;
+        }
+
+        .detail-h3 {
+            color: #1f8dd6;
+        }
+
+        .detail-p {
+            color: #7f8c8d;
+        }
+
+        .detail-mb {
+            margin-bottom: 30px;
+        }
+
+        .hope {
+            background: #0bb59b;
+            padding: 50px 0;
+        }
+
+        .hope-img {
+            text-align: center;
+        }
+
+        .hope-hr {
+            border-color: #149C88;
+        }
+
+        .hope-title {
+            font-size: 140%;
+        }
+
+        .about {
+            background: #fff;
+            padding: 40px 0;
+            color: #7f8c8d;
+        }
+
+        .about-color {
+            color: #34495e;
+        }
+
+        .about-title {
+            font-size: 180%;
+            padding: 30px 0 50px 0;
+            text-align: center;
+        }
+
+        .footer p {
+            color: #7f8c8d;
+            margin: 0;
+            padding: 15px 0;
+            text-align: center;
+            background: #2d3e50;
+        }
+    </style>
+
+</head>
+<body style="overflow-x: auto">
+<header class="am-topbar am-topbar-fixed-top">
+    <div class="am-container">
+        <h1 class="am-topbar-brand">
+            <a href="/Home/Index">Blog</a>
+        </h1>
+
+        <input type="hidden" name="returnUrl" value="@ViewBag.returnUrl"/>
+
+        <div class="am-collapse am-topbar-collapse" id="collapse-head">
+            <ul class="am-nav am-nav-pills am-topbar-nav">
+                <li class="zyl-menu "><a href="#">首页</a></li>
+                <li class="zyl-menu"><a href="#">项目</a></li>
+                <li class="am-dropdown" data-am-dropdown>
+                    <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
+                        下拉菜单 <span class="am-icon-caret-down"></span>
+                    </a>
+                    <ul class="am-dropdown-content">
+                        <li class="am-dropdown-header">标题</li>
+                        <li><a href="#">1. 默认样式</a></li>
+                        <li><a href="#">2. 基础设置</a></li>
+                        <li><a href="#">3. 文字排版</a></li>
+                        <li><a href="#">4. 网格系统</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="am-topbar-right">
+                <button onclick="window.location.href='/Account/Register?returnUrl=@ViewBag.returnUrl'" class="am-btn am-btn-secondary am-topbar-btn am-btn-sm"><span class="am-icon-pencil"></span> 注册</button>
+            </div>
+
+            <div class="am-topbar-right">
+                <button onclick="window.location.href='/Account/Login?returnUrl=@ViewBag.returnUrl'" class="am-btn am-btn-primary am-topbar-btn am-btn-sm"><span class="am-icon-user"></span> 登录</button>
+            </div>
+        </div>
+    </div>
+</header>
+<div style="width: 100%;height: 100%">
+    <iframe id="frmpage" src="/Home/MainPage" width="100%" height="100%" scrolling="auto"></iframe>
+</div>
+
+
+<script type="text/javascript">
+    function ChangePage(index) {
+        document.getElementById('frmpage').src = ""+index+"";
+    }
+
+    $(function () {
+        //追加激活css
+        $('.zyl-menu').on('click', function () {
+            $('.zyl-menu').removeClass('am-active');
+            $(this).addClass('am-active');
+        });
+    });
+</script>
+</body>
+</html>
+
+

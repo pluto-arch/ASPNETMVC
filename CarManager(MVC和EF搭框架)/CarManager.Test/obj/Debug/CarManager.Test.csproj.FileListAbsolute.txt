@@ -1,0 +1,17 @@
+P:\Repos_01\CarManager(MVC和EF搭框架)\CarManager.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+P:\Repos_01\CarManager(MVC和EF搭框架)\CarManager.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+P:\Repos_01\CarManager(MVC和EF搭框架)\CarManager.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+P:\Repos_01\CarManager(MVC和EF搭框架)\CarManager.Test\bin\Debug\zh-Hans\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+P:\Repos_01\CarManager(MVC和EF搭框架)\CarManager.Test\bin\Debug\zh-Hans\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+P:\Repos_01\CarManager(MVC和EF搭框架)\CarManager.Test\bin\Debug\zh-Hans\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+P:\Repos_01\CarManager(MVC和EF搭框架)\CarManager.Test\bin\Debug\CarManager.Test.dll
+P:\Repos_01\CarManager(MVC和EF搭框架)\CarManager.Test\bin\Debug\CarManager.Test.pdb
+P:\Repos_01\CarManager(MVC和EF搭框架)\CarManager.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+P:\Repos_01\CarManager(MVC和EF搭框架)\CarManager.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+P:\Repos_01\CarManager(MVC和EF搭框架)\CarManager.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+P:\Repos_01\CarManager(MVC和EF搭框架)\CarManager.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+P:\Repos_01\CarManager(MVC和EF搭框架)\CarManager.Test\obj\Debug\CarManager.Test.csproj.CoreCompileInputs.cache
+P:\Repos_01\CarManager(MVC和EF搭框架)\CarManager.Test\obj\Debug\CarManager.Test.csproj.CopyComplete
+P:\Repos_01\CarManager(MVC和EF搭框架)\CarManager.Test\obj\Debug\CarManager.Test.dll
+P:\Repos_01\CarManager(MVC和EF搭框架)\CarManager.Test\obj\Debug\CarManager.Test.pdb
+P:\Repos_01\CarManager(MVC和EF搭框架)\CarManager.Test\obj\Debug\CarManager.Test.csprojAssemblyReference.cache
