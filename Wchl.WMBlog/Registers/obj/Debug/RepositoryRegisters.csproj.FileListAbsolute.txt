@@ -6,3 +6,11 @@ P:\Repos_01\Wchl.WMBlog\Registers\obj\Debug\RepositoryRegisters.csproj.CoreCompi
 P:\Repos_01\Wchl.WMBlog\Registers\obj\Debug\RepositoryRegisters.csproj.CopyComplete
 P:\Repos_01\Wchl.WMBlog\Registers\obj\Debug\Registers.dll
 P:\Repos_01\Wchl.WMBlog\Registers\obj\Debug\Registers.pdb
+E:\GitHub\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Blog.WebUI\bin\NLog.config
+E:\GitHub\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Blog.WebUI\bin\Registers.dll
+E:\GitHub\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Blog.WebUI\bin\Registers.pdb
+E:\GitHub\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Registers\obj\Debug\RepositoryRegisters.csprojAssemblyReference.cache
+E:\GitHub\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Registers\obj\Debug\RepositoryRegisters.csproj.CoreCompileInputs.cache
+E:\GitHub\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Registers\obj\Debug\RepositoryRegisters.csproj.CopyComplete
+E:\GitHub\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Registers\obj\Debug\Registers.dll
+E:\GitHub\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Registers\obj\Debug\Registers.pdb
