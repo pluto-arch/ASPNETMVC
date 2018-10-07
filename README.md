@@ -1,2 +1,4 @@
 # ASPNETMVC
 ASP.NET MVC PROJECTS
+
+##核心项目：Wchl.WMBlog
