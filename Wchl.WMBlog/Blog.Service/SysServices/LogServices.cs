@@ -115,6 +115,7 @@ namespace Blog.Service.SysServices
             try
             {
                 result= _logDal.AddLog(log);
+                _cache.Clear();
             }
             catch (Exception e)
             {

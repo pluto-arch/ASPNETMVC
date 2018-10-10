@@ -113,17 +113,17 @@ namespace Blog.WebUI.Areas.Adm.Controllers
             AppUser user = UserManager.FindById(id);
             if (user != null)
             {
-                ViewBag.firstname = user.FirstName;
-                ViewBag.lastname = user.LastName;
+//                ViewBag.firstname = user.FirstName;
+//                ViewBag.lastname = user.LastName;
                 ViewBag.gender = user.Gender==true ? "1" : "0";
                 ViewBag.email = user.Email;
                 ViewBag.phone = user.PhoneNumber;
                 ViewBag.birthday = string.Format("{0:yyyy-MM-dd}", user.BirthDateTime) ;
                 ViewBag.age = user.Age;
-                ViewBag.nickname = user.NickName;
+//                ViewBag.nickname = user.NickName;
                 ViewBag.address = user.Country + "/" + user.ProvinceOrState + "/" + user.City;
                 ViewBag.weburl = user.WebUrl;
-                ViewBag.tab = user.Tab;
+//                ViewBag.tab = user.Tab;
             }
             else
             {

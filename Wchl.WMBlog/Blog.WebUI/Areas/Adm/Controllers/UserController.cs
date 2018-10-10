@@ -100,11 +100,11 @@ namespace Blog.WebUI.Areas.Adm.Controllers
                     }
                     user.ImgUrl = "";//暂时空
                     user.Gender = sex;
-                    user.FirstName = firstname;
-                    user.LastName = lastname;
-                    user.NickName = nickname;
+//                    user.FirstName = firstname;
+//                    user.LastName = lastname;
+//                    user.NickName = nickname;
                     user.Remark = DateTime.Now.ToString();//修改日期
-                    user.Tab = tab;
+//                    user.Tab = tab;
                     user.WebUrl = weburl;
                     user.Email = email;
                     user.PhoneNumber = phone;
