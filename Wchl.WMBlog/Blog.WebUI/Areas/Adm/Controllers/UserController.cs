@@ -10,6 +10,7 @@ using Microsoft.AspNet.Identity;
 
 namespace Blog.WebUI.Areas.Adm.Controllers
 {
+    [Authorize(Roles = "Administrators")]
     public class UserController : BaseController
     {
         /// <summary>
@@ -22,9 +23,7 @@ namespace Blog.WebUI.Areas.Adm.Controllers
             public string selected { get; set; }
             public string Disable { get; set; }
         }
-
-
-        [Authorize]
+        
         public JsonResult GetUserList()
         {
             string code1 = "1";//code为0时, 表示正常, 不为0时则提示msg信息
@@ -56,7 +55,6 @@ namespace Blog.WebUI.Areas.Adm.Controllers
         /// 更新个人信息
         /// </summary>
         /// <returns></returns>
-        [Authorize]
         public JsonResult UpdateOwnMessage(string id,string firstname, string lastname,string gender,string age,string birthday,string nickname,string email,string address
         ,string weburl,string tab,string phone)
         {

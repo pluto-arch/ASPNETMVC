@@ -24,7 +24,6 @@ namespace Blog.WebUI.Controllers
     {
 
         private readonly ISysUserInfoService _userInfoService;
-
         private readonly IMapper _mapper;
         private readonly MapperConfiguration _mapperConfig;
 
@@ -36,11 +35,18 @@ namespace Blog.WebUI.Controllers
         }
 
         [AllowAnonymous]
-        public ActionResult Index()
+        public ActionResult Index(string page="1")
         {
+            var user = CurrentUser;
+            var userlist = UserManager.Users.ToList();
+
+
             ViewBag.returnUrl = "/Home/Index";
+            ViewBag.totalcount = userlist.Count;//博文总数
+
             return View();
         }
+
 
         [Authorize]
         public ActionResult UserProps()

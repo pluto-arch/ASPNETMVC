@@ -16,7 +16,7 @@ using Microsoft.Owin.Security;
 
 namespace Blog.WebUI.Areas.Adm.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Administrators")]
     public class DefaultController : BaseController
     {
      
@@ -94,7 +94,7 @@ namespace Blog.WebUI.Areas.Adm.Controllers
         {
             AuthManager.SignOut();
             _log.WriteServiceLog(CurrentUser.UserName, "ID为：[" + CurrentUser.Id + "]的用户登出", "登出成功", "Logout", "/Adm/Default/Logout");
-            return Json(JsonHandler.CreateMessage(1, "登出成功", "/Home/Index"), JsonRequestBehavior.AllowGet);
+            return Json(JsonHandler.CreateMessage(1, "登出成功", "/Home/Index",null), JsonRequestBehavior.AllowGet);
         }
 
 
@@ -146,7 +146,7 @@ namespace Blog.WebUI.Areas.Adm.Controllers
         {
             AppUser user = CurrentUser;
           
-            return Json(JsonHandler.CreateMessage(1, "信息完整度", "80%"), JsonRequestBehavior.AllowGet);
+            return Json(JsonHandler.CreateMessage(1, "信息完整度", "80%",null), JsonRequestBehavior.AllowGet);
         }
 
 

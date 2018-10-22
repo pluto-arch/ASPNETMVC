@@ -10,7 +10,7 @@ namespace Blog.WebUI.Areas.Adm.Controllers
     /// <summary>
     /// 用户声明
     /// </summary>
-    ///
+    [Authorize(Roles = "Administrators")]
     public class ClaimsController : Controller
     {
         [Authorize]

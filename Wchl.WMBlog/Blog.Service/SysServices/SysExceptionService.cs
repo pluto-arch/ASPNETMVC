@@ -94,6 +94,7 @@ namespace Blog.Service.SysServices
             try
             {
                 result= _expDal.AddExceptoon(ex);
+                _cache.Clear();
             }
             catch (Exception e)
             {

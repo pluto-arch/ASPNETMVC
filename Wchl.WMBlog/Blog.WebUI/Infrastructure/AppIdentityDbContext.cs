@@ -29,7 +29,7 @@ namespace Blog.WebUI.Infrastructure
             base.OnModelCreating(modelBuilder);
         }
 
-
+        public System.Data.Entity.DbSet<Blog.WebUI.Models.AppRole> IdentityRoles { get; set; }
     }
 
     public class IdentityDbInit

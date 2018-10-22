@@ -351,8 +351,10 @@
     <Content Include="Content\images\29.jpg" />
     <Content Include="Content\images\30.jpg" />
     <Content Include="Content\images\bg.png" />
+    <Content Include="Content\images\logo-1.png" />
     <Content Include="Content\images\wood.jpg" />
     <Content Include="Content\layui.css" />
+    <Content Include="Content\mycss\index.css" />
     <Content Include="Content\normalize.css" />
     <Content Include="Content\style.css" />
     <Content Include="Content\themes\angular.css" />
@@ -1066,9 +1068,12 @@
     <Content Include="Scripts\layui\select\formSelects-v4.js" />
     <Content Include="Scripts\layui\select\formSelects-v4.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\myjs\index.js" />
     <Content Include="Scripts\table.js" />
     <Content Include="Scripts\vue.js" />
     <Content Include="Scripts\vue.min.js" />
+    <Content Include="Scripts\vue\vue.min.js" />
+    <Content Include="Scripts\vue\vuebar.js" />
     <Content Include="Scripts\zjs\js\zui.js" />
     <Content Include="Scripts\zjs\js\zui.lite.js" />
     <Content Include="Scripts\zjs\js\zui.lite.min.js" />

@@ -37,3 +37,11 @@ P:\Repos_01\Wchl.WMBlog\ServicesRegisters\obj\Debug\ServicesRegisters.csproj.Cor
 P:\Repos_01\Wchl.WMBlog\ServicesRegisters\obj\Debug\ServicesRegisters.csproj.CopyComplete
 P:\Repos_01\Wchl.WMBlog\ServicesRegisters\obj\Debug\ServicesRegisters.dll
 P:\Repos_01\Wchl.WMBlog\ServicesRegisters\obj\Debug\ServicesRegisters.pdb
+P:\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Blog.WebUI\bin\NLog.config
+P:\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Blog.WebUI\bin\ServicesRegisters.dll
+P:\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Blog.WebUI\bin\ServicesRegisters.pdb
+P:\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\ServicesRegisters\obj\Debug\ServicesRegisters.csprojAssemblyReference.cache
+P:\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\ServicesRegisters\obj\Debug\ServicesRegisters.csproj.CoreCompileInputs.cache
+P:\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\ServicesRegisters\obj\Debug\ServicesRegisters.csproj.CopyComplete
+P:\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\ServicesRegisters\obj\Debug\ServicesRegisters.dll
+P:\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\ServicesRegisters\obj\Debug\ServicesRegisters.pdb

@@ -6,6 +6,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.UI;
 using Blog.Common.Json;
 using Blog.WebCore;
 using Blog.WebCore.MvcExtension;
@@ -31,11 +32,12 @@ namespace Blog.WebUI.Controllers
             this._log = log;
         }
 
-     
+
         /// <summary>
         /// 登录
         /// </summary>
         /// <returns></returns>
+        [OutputCache(Duration = 300, Location = OutputCacheLocation.Client)]
         [AllowAnonymous]
         public ActionResult Login(string returnUrl)
         {
@@ -58,17 +60,17 @@ namespace Blog.WebUI.Controllers
         //控制器类上运用了Authorize注解属性，然后又在个别动作方法上运用了AllowAnonymous注解属性。这会将这些动作方法默认限制到已认证用户，但又能允许未认证用户登录到应用程序
         [HttpPost]
         [AllowAnonymous]
-        [ValidateAntiForgeryToken]//ValidateAntiForgeryToken注解属性，该属性与视图中的Html.AntiForgeryToken辅助器方法联合工作，防止Cross-Site Request Forgery（CSRF，跨网站请求伪造）的攻击
+       // [ValidateAntiForgeryToken]//ValidateAntiForgeryToken注解属性，该属性与视图中的Html.AntiForgeryToken辅助器方法联合工作，防止Cross-Site Request Forgery（CSRF，跨网站请求伪造）的攻击
         public async Task<JsonResult> Login(LoginModel details, string returnUrl="/Home/Index",string loginadmin="off")
         {
-
+            
             if (ModelState.IsValid)
             {
                 AppUser user = await UserManager.FindAsync(details.Name,
                     details.Password);
                 if (user == null)
                 {
-                    return Json(JsonHandler.CreateMessage(-1, "用户名或密码不存在",returnUrl),JsonRequestBehavior.AllowGet);
+                    return Json(JsonHandler.CreateMessage(-1, "用户名或密码不存在",returnUrl,null),JsonRequestBehavior.AllowGet);
                 }
                 else
                 {
@@ -81,9 +83,10 @@ namespace Blog.WebUI.Controllers
                     AuthManager.SignOut();//签出用户，这通常意味着使标识已认证用户的Cookie失效
                     AuthManager.SignIn(new AuthenticationProperties
                     {
-                        IsPersistent = false//获取或设置是否跨多个请求持久保存身份验证会话。
+                        IsPersistent = true,//获取或设置是否跨多个请求持久保存身份验证会话。
+                        //ExpiresUtc = DateTimeOffset.UtcNow.AddMinutes(30)
                     }, ident);//签入用户，这通常意味着要创建用来标识已认证请求的Cookie
-
+                    
                     _log.WriteServiceLog(user.UserName, "ID为：[" + user.Id + "],登录系统", "登录成功", "Login", "/Adm/Account/Login");
 
                     IList<string> uroles=UserManager.GetRoles(user.Id);
@@ -96,7 +99,7 @@ namespace Blog.WebUI.Controllers
                         else
                         {
                             returnUrl = "/Home/Index";
-                            return Json(JsonHandler.CreateMessage(2, "对不起，您还不是管理员身份，即将被重定向到首页", returnUrl), JsonRequestBehavior.AllowGet);
+                            return Json(JsonHandler.CreateMessage(2, "对不起，您还不是管理员身份，即将被重定向到首页", returnUrl,null), JsonRequestBehavior.AllowGet);
                         } 
                     }
                     else
@@ -106,13 +109,18 @@ namespace Blog.WebUI.Controllers
                             returnUrl = "/Home/index";
                         }
                     }
-
-                    return Json(JsonHandler.CreateMessage(1, "登录成功，即将跳转",returnUrl), JsonRequestBehavior.AllowGet);
+                    var loginedUser = user;
+                    return Json(JsonHandler.CreateMessage(1, "登录成功" ,returnUrl,loginedUser), JsonRequestBehavior.AllowGet);
                 }
             }
             ViewBag.returnUrl = returnUrl;
-            return Json(JsonHandler.CreateMessage(0, "登陆失败,未通过验证", returnUrl), JsonRequestBehavior.AllowGet);
+            return Json(JsonHandler.CreateMessage(0, "登陆失败,未通过验证", returnUrl,null), JsonRequestBehavior.AllowGet);
         }
+
+
+
+
+
 
         [Authorize]
         public ActionResult Logout()

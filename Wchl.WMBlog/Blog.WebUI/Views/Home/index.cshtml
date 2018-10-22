@@ -7,160 +7,186 @@
 
 <html>
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     <link rel="icon" type="image/png" href="~/assets/i/favicon.png">
     <link rel="apple-touch-icon-precomposed" href="~/assets/i/app-icon72x72@2x.png">
-    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
-    <link rel="stylesheet" href="~/assets/css/amazeui.min.css" />
-    <link rel="stylesheet" href="~/assets/css/admin.css">
-    <!--easyui-->
-    <link rel="stylesheet" type="text/css" href="~/Content/themes/default/easyui.css">
-    <link rel="stylesheet" type="text/css" href="~/Content/themes/icon.css">
-    <!--[if (gte IE 9)|!(IE)]><!-->
+    <meta name="apple-mobile-web-app-title" content="Blog" />
+    <!--font-awesome字体图标-->
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/mycss/index.css" rel="stylesheet" />
+    <!--JQuery-->
     <script src="~/Scripts/jquery-3.3.1.min.js"></script>
-    <!--<![endif]-->
-    <script src="~/assets/js/amazeui.min.js"></script>
-    <script src="~/assets/js/app.js"></script>
-    <script type="text/javascript" src="~/Scripts/easyuijs/jquery.easyui.min.js"></script>
-    <style>
-        .get {
-            background: #1E5B94;
-            color: #fff;
-            text-align: center;
-            padding: 100px 0;
-        }
-
-        .get-title {
-            font-size: 200%;
-            border: 2px solid #fff;
-            padding: 20px;
-            display: inline-block;
-        }
-
-        .get-btn {
-            background: #fff;
-        }
-
-        .detail {
-            background: #fff;
-        }
-
-        .detail-h2 {
-            text-align: center;
-            font-size: 150%;
-            margin: 40px 0;
-        }
-
-        .detail-h3 {
-            color: #1f8dd6;
-        }
-
-        .detail-p {
-            color: #7f8c8d;
-        }
-
-        .detail-mb {
-            margin-bottom: 30px;
-        }
-
-        .hope {
-            background: #0bb59b;
-            padding: 50px 0;
-        }
-
-        .hope-img {
-            text-align: center;
-        }
-
-        .hope-hr {
-            border-color: #149C88;
-        }
-
-        .hope-title {
-            font-size: 140%;
-        }
-
-        .about {
-            background: #fff;
-            padding: 40px 0;
-            color: #7f8c8d;
-        }
-
-        .about-color {
-            color: #34495e;
-        }
-
-        .about-title {
-            font-size: 180%;
-            padding: 30px 0 50px 0;
-            text-align: center;
-        }
-
-        .footer p {
-            color: #7f8c8d;
-            margin: 0;
-            padding: 15px 0;
-            text-align: center;
-            background: #2d3e50;
-        }
-    </style>
+    <!--VUE JS-->
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- 实际环境版本，删除debug信息 -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"></script> -->
+    <!--本地VUE-->
+    <!-- <script src="js/vue.min.js"></script> -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <script src="~/Scripts/myjs/index.js"></script>
 
 </head>
-<body style="overflow-x: auto">
-<header class="am-topbar am-topbar-fixed-top">
-    <div class="am-container">
-        <h1 class="am-topbar-brand">
-            <a href="/Home/Index">Blog</a>
-        </h1>
-
-        <input type="hidden" name="returnUrl" value="@ViewBag.returnUrl"/>
-
-        <div class="am-collapse am-topbar-collapse" id="collapse-head">
-            <ul class="am-nav am-nav-pills am-topbar-nav">
-                <li class="zyl-menu "><a href="#">首页</a></li>
-                <li class="zyl-menu"><a href="#">项目</a></li>
-                <li class="am-dropdown" data-am-dropdown>
-                    <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
-                        下拉菜单 <span class="am-icon-caret-down"></span>
+<body>
+    <!--VUE 容器-->
+    <div id="app">
+        <div class="pc-menu">
+            <nav>
+                <ul>
+                    <li class="logo" style="background: url('../../Content/images/logo-1.png') no-repeat;width: 120px;"></li>
+                    <li ref="siteHome" v-for="(item,index) in menus" v-bind:id="'menu-'+index"><a href="#" class="a-basicCSS" v-on:mouseover="changebgColor($event)" v-on:mouseout="changebgColor($event)" v-on:click="setColor($event)">{{item.name}}</a></li>
+                </ul>
+                <div class="search-box">
+                    <input v-model="searchtext" class="search-text" type="text" name="" placeholder="Type to Search">
+                    <a href="#" class="search-btn" v-on:click="SearchData">
+                        <i class="fa fa-search"></i>
                     </a>
-                    <ul class="am-dropdown-content">
-                        <li class="am-dropdown-header">标题</li>
-                        <li><a href="#">1. 默认样式</a></li>
-                        <li><a href="#">2. 基础设置</a></li>
-                        <li><a href="#">3. 文字排版</a></li>
-                        <li><a href="#">4. 网格系统</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <div class="am-topbar-right">
-                <button onclick="window.location.href='/Account/Register?returnUrl=@ViewBag.returnUrl'" class="am-btn am-btn-secondary am-topbar-btn am-btn-sm"><span class="am-icon-pencil"></span> 注册</button>
-            </div>
-
-            <div class="am-topbar-right">
-                <button onclick="window.location.href='/Account/Login?returnUrl=@ViewBag.returnUrl'" class="am-btn am-btn-primary am-topbar-btn am-btn-sm"><span class="am-icon-user"></span> 登录</button>
-            </div>
+                </div>
+                <div class="mobile-menu-btn" v-on:click="showmobilemenu">
+                    <span><i class="fa fa-bars fa-2x"></i></span>
+                </div>
+            </nav>
         </div>
+        <div class="mobile-menu">
+            <nav>
+                <ul>
+                    <li class="mobile-logo"><img src="~/Content/images/logo-1.png" alt="111"></li>
+                    <li class="mobile-search">
+                        <input v-model="searchtext" class="mobile-search-text" type="text" name="" placeholder="Type to Search">
+                        <a href="#" class="mobile-search-btn" v-on:click="SearchData">
+                            <i class="fa fa-search"></i>
+                        </a>
+                    </li>
+                    <li ref="siteHome2" v-for="(item,index) in menus" v-bind:id="'menu-'+index">
+                        <a href="#" class="a-basicCSS" v-on:mouseover="changebgColor($event)"
+                           v-on:mouseout="changebgColor($event)" v-on:click="setColor($event)">{{item.name}}</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="cards">
+
+            <div class="articles-card-list">
+                <div class="site-notices">
+                    <el-carousel :interval="5000" arrow="always">
+                        <el-carousel-item v-for="item in 4" :key="item">
+                            <h3>{{ item }}</h3>
+                        </el-carousel-item>
+                    </el-carousel>
+                </div>
+                <transition-group name="card" tag="div">
+                    <div :key="item.id" class="card-item" v-for="(item,index) in datas" v-bind:id="'card-'+item.id" v-on:mouseover="toggleShow($event)"
+                         v-on:mouseout="toggleHide($event)">
+                        <div class="item-img"><img v-bind:src="item.img" alt="这是一张图片" style="width: 100%; height: 135px;"></div>
+                        <div class="item-content">
+                            <div class="item-title">
+                                <a href="#" class="cat">{{item.uname}}<i></i></a>
+                                <span class="title" v-on:mouseover="titleShow($event)" v-on:mouseout="titleShow($event)">{{item.title}}</span>
+                            </div>
+                            <div class="item-counts">
+                                {{item.readcount}}
+                            </div>
+                            <p class="note">
+                                {{item.text}}
+                            </p>
+                        </div>
+                    </div>
+                </transition-group>
+
+
+                <div class="loadmore">
+                    <div v-on:click="loadmore">
+                        <span class="more">More...</span>
+                        <div class="sk-three-bounce">
+                            <div class="sk-child sk-bounce1"></div>
+                            <div class="sk-child sk-bounce2"></div>
+                            <div class="sk-child sk-bounce3"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="help-operation">
+                <div class="login vip-info" v-if="isnotLogin">
+                    <div class="login-title">
+                        {{message}}
+                    </div>
+                    <div class="login-info">
+
+                        @using (Html.BeginForm("Login", "Account", FormMethod.Post))
+                        {
+                            @Html.AntiForgeryToken()
+                            <el-form :model="user" ref="loginForm" :rules="loginRules" status-icon label-width="70px">
+                                <el-form-item label="用户名" prop="Name">
+                                    <el-input name="Name" v-model="user.Name" autocomplete="onf"></el-input>
+                                    <input type="hidden" name="returnUrl" value="@ViewBag.returnUrl" />
+                                </el-form-item>
+                                <el-form-item label="密码" prop="Password">
+                                    <el-input name="Password" type="password" v-model="user.Password" autocomplete="off"></el-input>
+                                </el-form-item>
+                                <el-form-item>
+                                    <el-button type="primary" v-on:click="submitForm('loginForm')">登录</el-button>
+                                    <el-button v-on:click="registerForm('loginForm')">注册</el-button>
+                                </el-form-item>
+                            </el-form>
+                        }
+
+                    </div>
+                </div>
+                <div class="vip-info" v-else>
+                    <div class="user-name">
+                        <div class="head-img">
+                            <img src="../../Content/images/02.jpg" alt="">
+                        </div>
+                        <div class="names">
+                            {{loginuser.nickname}}
+                        </div>
+                        <div v-if="!isnotLogin" class="logout" v-on:click="logout">[注销]</div>
+                    </div>
+
+                    <div class="option">
+                        <a href="#" class="btn btn1">TTTTT1</a>
+                        <a href="#" class="btn btn2">TTTTT2</a>
+                        <a href="#" class="btn btn3">TTTTT3</a>
+                        <a href="#" class="btn btn4">TTTTT4</a>
+                    </div>
+                </div>
+                <div class="articles-category" ref="helptags">
+                    <el-tag>标签一</el-tag>
+                    <el-tag type="success">标签二</el-tag>
+                    <el-tag type="info">标签三</el-tag>
+                    <el-tag type="warning">标签四</el-tag>
+                    <el-tag type="danger">标签五</el-tag>
+                </div>
+                <div class="Recommend">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis impedit praesentium consequatur necessitatibus asperiores repellat dolores pariatur modi provident hic?
+                </div>
+                <div class="statistics">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum adipisci quos ex aliquam voluptas, ratione beatae eius aperiam ad pariatur? Blanditiis ullam aut doloremque?
+                </div>
+            </div>
+
+        </div>
+
+        <div class="toTop" v-on:click="gotoTop">
+            <el-tooltip class="item" effect="dark" content="回到顶部" placement="left">
+                <i class="fa fa-caret-up fa-3x" aria-hidden="true"></i>
+            </el-tooltip>
+        </div>
+        <footer>
+            this is footer
+        </footer>
     </div>
-</header>
-<div style="width: 100%;height: 100%">
-    <iframe id="frmpage" src="/Home/MainPage" width="100%" height="100%" scrolling="auto"></iframe>
-</div>
 
 
-<script type="text/javascript">
-    function ChangePage(index) {
-        document.getElementById('frmpage').src = ""+index+"";
-    }
 
-    $(function () {
-        //追加激活css
-        $('.zyl-menu').on('click', function () {
-            $('.zyl-menu').removeClass('am-active');
-            $(this).addClass('am-active');
-        });
-    });
-</script>
 </body>
 </html>
 
