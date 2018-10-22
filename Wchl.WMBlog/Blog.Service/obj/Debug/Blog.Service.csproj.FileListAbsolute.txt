@@ -33,6 +33,7 @@ P:\Repos_01\Wchl.WMBlog\Blog.Service\bin\Debug\EntityFramework.SqlServer.dll
 P:\Repos_01\Wchl.WMBlog\Blog.Service\bin\Debug\Blog.Repository.pdb
 P:\Repos_01\Wchl.WMBlog\Blog.Service\bin\Debug\Blog.Repository.dll.config
 P:\Repos_01\Wchl.WMBlog\Blog.Service\bin\Debug\EntityFramework.SqlServer.xml
+<<<<<<< HEAD
 P:\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Blog.Service\bin\Debug\NLog.config
 P:\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Blog.Service\bin\Debug\Blog.Service.dll.config
 P:\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Blog.Service\bin\Debug\Blog.Service.dll
@@ -67,3 +68,39 @@ P:\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Blog.Service\obj\Debug\Blog.Service.csproj.Co
 P:\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Blog.Service\obj\Debug\Blog.Service.csproj.CopyComplete
 P:\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Blog.Service\obj\Debug\Blog.Service.dll
 P:\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Blog.Service\obj\Debug\Blog.Service.pdb
+=======
+E:\GitHub\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Blog.Service\bin\Debug\NLog.config
+E:\GitHub\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Blog.Service\bin\Debug\Blog.Service.dll.config
+E:\GitHub\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Blog.Service\bin\Debug\Blog.Service.dll
+E:\GitHub\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Blog.Service\bin\Debug\Blog.Service.pdb
+E:\GitHub\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Blog.Service\bin\Debug\Blog.Common.dll
+E:\GitHub\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Blog.Service\bin\Debug\Blog.Domain.dll
+E:\GitHub\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Blog.Service\bin\Debug\Blog.IRepository.dll
+E:\GitHub\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Blog.Service\bin\Debug\Blog.IService.dll
+E:\GitHub\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Blog.Service\bin\Debug\Blog.Repository.dll
+E:\GitHub\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Blog.Service\bin\Debug\EntityFramework.dll
+E:\GitHub\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Blog.Service\bin\Debug\EntityFramework.SqlServer.dll
+E:\GitHub\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Blog.Service\bin\Debug\Unity.Abstractions.dll
+E:\GitHub\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Blog.Service\bin\Debug\StackExchange.Redis.dll
+E:\GitHub\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Blog.Service\bin\Debug\Newtonsoft.Json.dll
+E:\GitHub\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Blog.Service\bin\Debug\Unity.Container.dll
+E:\GitHub\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Blog.Service\bin\Debug\Blog.Common.pdb
+E:\GitHub\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Blog.Service\bin\Debug\Blog.Domain.pdb
+E:\GitHub\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Blog.Service\bin\Debug\Blog.Domain.dll.config
+E:\GitHub\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Blog.Service\bin\Debug\Blog.IRepository.pdb
+E:\GitHub\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Blog.Service\bin\Debug\Blog.IService.pdb
+E:\GitHub\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Blog.Service\bin\Debug\Blog.Repository.pdb
+E:\GitHub\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Blog.Service\bin\Debug\Blog.Repository.dll.config
+E:\GitHub\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Blog.Service\bin\Debug\EntityFramework.xml
+E:\GitHub\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Blog.Service\bin\Debug\EntityFramework.SqlServer.xml
+E:\GitHub\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Blog.Service\bin\Debug\NLog.xml
+E:\GitHub\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Blog.Service\bin\Debug\Unity.Abstractions.pdb
+E:\GitHub\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Blog.Service\bin\Debug\StackExchange.Redis.xml
+E:\GitHub\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Blog.Service\bin\Debug\Newtonsoft.Json.xml
+E:\GitHub\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Blog.Service\bin\Debug\Unity.Container.pdb
+E:\GitHub\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Blog.Service\obj\Debug\Blog.Service.csprojAssemblyReference.cache
+E:\GitHub\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Blog.Service\obj\Debug\Blog.Service.csproj.CoreCompileInputs.cache
+E:\GitHub\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Blog.Service\obj\Debug\Blog.Service.csproj.CopyComplete
+E:\GitHub\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Blog.Service\obj\Debug\Blog.Service.dll
+E:\GitHub\ASPNETMVC\ASPNETMVC\Wchl.WMBlog\Blog.Service\obj\Debug\Blog.Service.pdb
+>>>>>>> 83a575766c321c30ecd92af6452c64f3e048493f

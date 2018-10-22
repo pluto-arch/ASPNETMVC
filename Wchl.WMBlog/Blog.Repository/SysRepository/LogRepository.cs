@@ -14,7 +14,7 @@ namespace Blog.Repository.SysRepository
     public class LogRepository : ILogRepository
     {
         #region 注入
-        private new readonly IDbContext _db;
+        private  readonly IDbContext _db;
         private IDbSet<SysLogs> _dbset;
         protected virtual IDbSet<SysLogs> Dbset
         {
